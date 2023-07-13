@@ -4,6 +4,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom';
 
+
 const user = {
   name: 'Tom Cook',
   email: 'tom@example.com',
@@ -26,21 +27,13 @@ function Navbar(props) {
   const location = useLocation();
  
   const navigation = [
-    { name: 'Signup', href: '/signup', current: location.pathname === '/signup' },
     { name: 'Login', href: '/', current: location.pathname === '/' },
+    { name: 'Signup', href: '/signup', current: location.pathname === '/signup' },
     { name: 'Problems', href: '/problems', current: location.pathname === '/problems' },
   ];
   
   return (
     <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-gray-100">
-        <body class="h-full">
-        ```
-      */}
       <div className="min-h-full">
         <Disclosure as="nav" className="bg-stone-950">
           {({ open }) => (
